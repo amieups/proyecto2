@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+       <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+   <h:head>
+  <title>BASE DE DATOS DEL MINISTERIO DE EDUCACION</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</h:head>
+
+    <h:body>
+           <h:form >
+  <div id="main">
+    <div id="links"></div>
+    <div id="header">
+      <div id="logo">
+          <div id="logo_text" style="">
+              <h1 style="color:yellow ">MINISTERIO <span class="alternate_colour " style="color: blue ">DE <span class="alternate_colour " style="color: red ">EDUCACION</span></span></h1>
+      </div>
+           </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="tab_selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="tab_selected"><a href="index.xhtml">PAGINA PRINCIPAL</a></li>
+          <li class="tab_selected" ><a href="registro.xhtml">REGISTRARSE</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div id="site_content" align="center" >
+
+        
+
+<p:imageSwitch effect="fade" style="background-position-x: " >
+    <p:graphicImage value="/style/minis1.png" width="800" height="200" style="background-position-x: 100cm"/>
+   <p:graphicImage value="/style/minis2.png" width="800" height="200" />
+   <p:graphicImage value="/style/minis3.jpeg" width="800" height="200"/>
+   <p:graphicImage value="/style/minis4.png" width="800" height="200"/>
+</p:imageSwitch>
+                
+                
+   
+        <div class="sidebar" align="left">
+        <!-- insert your sidebar items here -->
+       
+        
+        <h1>Mision</h1>
+        <p>Garantizar el acceso y calidad de la educacion inicial, basica y bachillerato a los y las habitantes del territorio nacional
+            
+        <br /><a href="https://educacion.gob.ec/valores-mision-vision/">Leer mas</a></p>
+        <h1>Vision</h1>
+        <p>El Sistema Nacional de Educacion brindara una educacion centrada en el ser humano, con calidad, calidez, integral, holistica, critica, participativa, democratica, inclusiva e interactiva, con equidad de genero, basado en la sabiduria ancestral, plurinacionalidad, con identidad y pertinencia cultural que satisface las necesidades de aprendizaje individual y social</p>
+        <h1>Valores</h1>
+        <p>El Sistema Nacional de Educacion brindara una educacion</p>
+      </div>
+        
+        <div id="content" >
+        <!-- insert the page content here -->
+        <br /><br />
+        
+          <h1 style="font-family: cursive ; font-size: 20px">Ingrese la siguiente informacion para completar el registro de Administrador </h1>
+              
+
+       
+		<br /><br />
+		
+     <p:fieldset  style="margin-bottom:30px ; background-color:beige ; border-color: #080808 ; width: 400px">
+        
+    
+    	
+     
+       <div class="ui-g">
+                    <div class="ui-g-12 ui-md-6 ui-lg-4">
+                        <p:outputLabel style="color: #204d74 ; font-family: inherit; font-size:30px" value="Nombre:" />
+                      
+                    </div>
+                    <div class="ui-g-12 ui-md-6 ui-lg-3">
+
+                        <!-- sticky=mantener cuadro o no -->
+      
+                        <p:inputText style="height: 30px ; width: 200px" id="nom" rendered="true" value="#{c_persona.p.nombre}" required="true"></p:inputText><br/><br/>
+                          <h:message for="nom"></h:message>
+                        
+                    </div>
+
+                </div>
+                
+                   <div class="ui-g">
+                       
+                    <div class="ui-g-12 ui-md-6 ui-lg-4">
+                         <p:outputLabel style="color: #204d74 ; font-family: inherit; font-size:30px" value="Apellido:"  />
+     
+                    </div>
+                       
+                    <div class="ui-g-12 ui-md-6 ui-lg-3">
+
+   <p:inputText  id="apellido" style="height: 30px ; width: 200px" value="#{c_persona.p.apellido}" required="true" /><br/><br/>
+       
+		<h:message for="apellido"></h:message>
+                    </div>
+
+                </div>
+                
+                 <div class="ui-g">
+                       
+                    <div class="ui-g-12 ui-md-6 ui-lg-4">
+                         <p:outputLabel  style="color: #204d74 ; font-family: inherit; font-size:30px" value="Cedula:" />
+     
+                    </div>
+                       
+                    <div class="ui-g-12 ui-md-6 ui-lg-3">
+
+           <p:inputText id="cedula" style="height: 30px ; width: 200px" value="#{c_persona.p.cedula}" required="true"/><br/><br/>
+       
+		<h:message for="cedula"></h:message>
+                    </div>
+
+                </div>
+                
+                 <div class="ui-g">
+                       
+                    <div class="ui-g-12 ui-md-6 ui-lg-4">
+                        <p:outputLabel style="color: #204d74 ; font-family: inherit; font-size:30px" value="Correo:"  />
+      
+                    </div>
+                       
+                    <div class="ui-g-12 ui-md-6 ui-lg-3">
+
+      <p:inputText  id="correo" style="height: 30px ; width: 200px" value="#{c_persona.p.correo}" required="true" /><br/><br/>
+       
+		<h:message for="correo"></h:message>
+                    </div>
+
+                </div>
+                
+                 <div class="ui-g">
+                       
+                    <div class="ui-g-12 ui-md-6 ui-lg-4">
+                       <p:outputLabel style="color: #204d74 ; font-family: inherit; font-size:30px" value="Clave:" />
+  
+                    </div>
+                       
+                    <div class="ui-g-12 ui-md-6 ui-lg-3">
+
+                        <p:inputText  id="clave" style="height: 30px ; width: 200px" type="password" value="#{c_persona.p.clave}" required="true"/><br/><br/>
+       
+		<h:message for="clave"></h:message>
+                    </div>
+
+                </div>
+ 
+                <div class="ui-g">
+                    <p:growl id="mensajes" showDetail="true" life="2000" />
+                    
+                    <p:commandButton value="ENVIAR" ajax="false" action="#{c_persona.insertar_admin()}" />
+       
+               
+                    </div>
+             
+             </p:fieldset>
+                
+      </div>
+        
+          
+    <div id="site_content_bottom"></div>
+</div>
+    
+     
+    
+    <div id="footer">Copyright Company Name. All Rights Reserved. | <a href="http://www.squidfingers.com">pattern from squidfingers</a> | <a href="http://validator.w3.org/check?uri=referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.dcarter.co.uk">design by dcarter</a></div>
+
+    </div>
+<div style="text-align: center; font-size: 0.75em;">DiseÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o descargado desde <a href="http://www.misplantillas.com/">plantillas web gratis</a>.</div>
+  </h:form>
+    </h:body>
+</html>
